@@ -1,0 +1,57 @@
+# GET all persons
+# 200
+GET http://localhost:3001/api/persons
+
+###
+
+# POST new person
+# 201
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "content": "Matti Meikäläinen",
+    "number": "045-987654"
+}
+
+###
+
+# GET all persons again to confirm
+# 200
+GET http://localhost:3001/api/persons
+
+###
+
+# POST same person again to test 
+# 400 "error": "name must be unique"
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "content": "Matti Meikäläinen",
+    "number": "045-987654"
+}
+
+###
+
+# POST person with no number. 
+# 400 "error": "name or number missing"
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "content": "Matti Meikäläinen"
+}
+
+###
+
+# POST person with no number. 
+# 400 "error": "name or number missing"
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "number": "045-123456"
+}
+
+###
