@@ -1,19 +1,19 @@
 # GET all persons
-GET http://localhost:3001/api/persons
+GET https://phonebook-18ex.onrender.com/api/persons
 
 ###
 
 # DELETE one
-DELETE http://localhost:3001/api/persons/1
+DELETE https://phonebook-18ex.onrender.com/api/persons/1
 
 ###
 
 # GET again to confirm deletion
-GET http://localhost:3001/api/persons
+GET https://phonebook-18ex.onrender.com/api/persons
 
 ###
 
 # DELETE one again. Should return 404
-DELETE http://localhost:3001/api/persons/1
+DELETE https://phonebook-18ex.onrender.com/api/persons/1
 
 ###

@@ -108,7 +108,7 @@ app.delete('/api/persons/:id', (request, response) => {
   persons = persons.filter(person => person.id !== id)
 
   if (persons.length < initialLength) {
-    response.status(204).end()
+    response.status(204).end({error: 'person deleted'})
   } else {
     response.status(404).json({ error: 'person not found' })
   }

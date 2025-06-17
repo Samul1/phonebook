@@ -1,12 +1,12 @@
 # GET all persons
 # 200
-GET http://localhost:3001/api/persons
+GET https://phonebook-18ex.onrender.com/api/persons
 
 ###
 
 # POST new person
 # 201
-POST http://localhost:3001/api/persons
+POST https://phonebook-18ex.onrender.com/api/persons
 Content-Type: application/json
 
 {
@@ -18,13 +18,13 @@ Content-Type: application/json
 
 # GET all persons again to confirm
 # 200
-GET http://localhost:3001/api/persons
+GET https://phonebook-18ex.onrender.com/api/persons
 
 ###
 
 # POST same person again to test 
 # 400 "error": "name must be unique"
-POST http://localhost:3001/api/persons
+POST https://phonebook-18ex.onrender.com/api/persons
 Content-Type: application/json
 
 {
@@ -36,7 +36,7 @@ Content-Type: application/json
 
 # POST person with no number. 
 # 400 "error": "name or number missing"
-POST http://localhost:3001/api/persons
+POST https://phonebook-18ex.onrender.com/api/persons
 Content-Type: application/json
 
 {
@@ -47,7 +47,7 @@ Content-Type: application/json
 
 # POST person with no number. 
 # 400 "error": "name or number missing"
-POST http://localhost:3001/api/persons
+POST https://phonebook-18ex.onrender.com/api/persons
 Content-Type: application/json
 
 {
